@@ -4,6 +4,7 @@ import ee
 import webapp2
 import jinja2
 import os
+import json
 
 # Authenticate with Earth Engine
 EE_ACCOUNT = 'ecodash-beta@appspot.gserviceaccount.com'
@@ -24,8 +25,38 @@ class MainHandler(webapp2.RequestHandler):
         template = JINJA2_ENVIRONMENT.get_template('index.html')
         self.response.out.write(template.render(template_values))
 
+class GetMapHandler(webapp2.RequestHandler):
+    def get(self):
+
+        start_date = '2000-01-01'
+        end_date = '2000-12-31'
+
+        collection = ee.ImageCollection('MODIS/MYD13A1')
+        reference = collection.filterDate(start_date,end_date).sort('system:time_start').select('EVI')
+        mymean = ee.Image(reference.mean())
+
+        countries = ee.FeatureCollection('ft:1tdSwUL7MVpOauSgRzqVTOwdfy17KDbw-1d9omPw')
+        country_names = ['Myanmar (Burma)','Thailand','Laos','Vietnam','Cambodia']
+        mekongCountries = countries.filter(ee.Filter.inList('Country', country_names))
+
+        fit = mymean.clip(mekongCountries)
+        mapid = fit.getMapId({
+            'min': '-400',
+            'max': '400',
+            'bands': ' EVI_mean',
+            'palette' : '931206,ff1b05,fdff42,4bff0f,0fa713'
+        })
+
+	map_results = {
+	    'eeMapId': mapid['mapid'],
+	    'eeToken': mapid['token']
+        }
+
+	self.response.headers['Content-Type'] = 'application/json'
+	self.response.out.write(json.dumps(map_results))
+
 # Setup dynamic routing table
 app = webapp2.WSGIApplication([
-    # ('/getmap', GetMapHandler),
+    ('/getmap', GetMapHandler),
     ('/', MainHandler)
 ])
