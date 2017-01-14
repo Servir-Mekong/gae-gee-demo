@@ -23,11 +23,24 @@ window.eqfeed_callback = function(results) {
     }
 }
 
-// {'features' :
-//  [ {'geometry' : {'coordinates' : [coord1 coord2]}}
-//    {'geometry' : {'coordinates' : [coord1 coord2]}}
-//    {'geometry' : {'coordinates' : [coord1 coord2]}}
-//    ...
-//    {'geometry' : {'coordinates' : [coord1 coord2]}}
-//  ]
-// }
+var eeMapType;
+
+function showEEMap(eeMapId, eeToken) {
+    console.log("EE Map ID: " + eeMapId);
+    console.log("EE Token: " + eeToken);
+
+    eeMapType = new google.maps.ImageMapType({
+        'name': 'ecomap',
+        'opacity': 1.0,
+        'tileSize': new google.maps.Size(256,256),
+        'getTileUrl': function(tile,zoom) {
+            return 'https://earthengine.googleapis.com/map/'
+                + eeMapId + '/' + zoom + '/' + tile.x + '/' + tile.y
+                + '?token=' + eeToken;
+        }
+    });
+
+    console.log("EE Map Type:" + eeMapType);
+    
+    // map.overlayMapTypes.push(eeMapType);
+}
