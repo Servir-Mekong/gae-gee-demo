@@ -10,7 +10,6 @@ and the Google Maps API.
 - Call localhost:8080/getmap to get eeMapId and eeToken (is this the right port?)
 - In the Javascript console, run: showEEMap(eeMapId, eeToken) => "EE Map Type:" + eeMapType
 - Uncomment // map.overlayMapTypes.push(eeMapType); in script.js
-- Explore the cljs directory
 
 * Certificate Error Note
 
