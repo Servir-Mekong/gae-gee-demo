@@ -1,0 +1,87 @@
+#+TITLE: Google Earth Engine/Google Appspot Internal Training Workshop
+#+AUTHOR: Gary W. Johnson, Ph.D. (Spatial Informatics Group)
+#+DATE: Bangkok, Thailand - January 2017
+
+* Workshop Objectives
+
+By the end of the fourth day, participants should clearly understand
+the technologies and workflows available to transform a Google Earth
+Engine script written in Javascript into a standalone web application
+that provides the same functionality through a custom web interface.
+We will review and practice frontend web development in HTML, CSS,
+Javascript, and Clojurescript and will build out our backend web stack
+with Python and the Google Earth Engine Python API.
+
+We will first examine each of these individual technologies at a high
+level and perform exercises with them to construct a new simple web
+application. Next, we will work together to integrate the
+functionality from a Javascript GEE script into our new website.
+Finally, we will review the codebase of an existing GEE-based web
+application to understand how its various parts fit together.
+
+* Day 1
+
+  |-------+--------------------------------------|
+  |  Time | Activity                             |
+  |-------+--------------------------------------|
+  |  9:00 | Welcome and Introductions            |
+  |  9:15 | Agenda Review and Goal Setting       |
+  |  9:30 | Web Technology Stack Overview        |
+  | 10:30 | Break                                |
+  | 10:45 | Developer Tools Installation         |
+  | 12:00 | Google Cloud Developer Account Setup |
+  | 12:30 | Lunch                                |
+  |  1:30 | HTML5 (Overview and Exercises)       |
+  |  2:30 | CSS3 (Overview and Exercises)        |
+  |  3:30 | Break                                |
+  |  3:45 | Javascript (Overview and Exercises)  |
+  |  4:45 | Wrap-up and Review our Progress      |
+  |  5:00 | End of Workshop Day 1                |
+  |-------+--------------------------------------|
+
+* Day 2
+
+  |-------+------------------------------------------------|
+  |  Time | Activity                                       |
+  |-------+------------------------------------------------|
+  |  9:00 | Agenda Review and Goal Setting                 |
+  |  9:15 | Clojurescript: Part 1 (Overview and Tooling)   |
+  | 10:30 | Break                                          |
+  | 10:45 | Clojurescript: Part 2 (Syntax and Semantics)   |
+  | 12:30 | Lunch                                          |
+  |  1:30 | Clojurescript: Part 3 (Reagent and core.async) |
+  |  3:30 | Break                                          |
+  |  3:45 | Clojurescript: Part 4 (Google Maps API)        |
+  |  4:45 | Wrap-up and Review our Progress                |
+  |  5:00 | End of Workshop Day 2                          |
+  |-------+------------------------------------------------|
+
+* Day 3
+
+  |-------+---------------------------------------|
+  |  Time | Activity                              |
+  |-------+---------------------------------------|
+  |  9:00 | Agenda Review and Goal Setting        |
+  |  9:15 | Using Git and GitHub                  |
+  | 10:30 | Break                                 |
+  | 10:45 | Adding Dynamic Routes with Python     |
+  | 12:30 | Lunch                                 |
+  |  1:30 | GEE Javascript to Python Translation  |
+  |  3:30 | Break                                 |
+  |  3:45 | Displaying GEE Result Maps and Charts |
+  |  4:45 | Wrap-up and Review our Progress       |
+  |  5:00 | End of Workshop Day 3                 |
+  |-------+---------------------------------------|
+
+* Day 4
+
+  |-------+--------------------------------------|
+  |  Time | Activity                             |
+  |-------+--------------------------------------|
+  |  9:00 | Agenda Review and Goal Setting       |
+  |  9:15 | Ecodash Codebase Walkthrough: Part 1 |
+  | 10:30 | Break                                |
+  | 10:45 | Ecodash Codebase Walkthrough: Part 2 |
+  | 12:30 | Wrap-up and Review our Progress      |
+  |  1:00 | End of Workshop Day 4                |
+  |-------+--------------------------------------|

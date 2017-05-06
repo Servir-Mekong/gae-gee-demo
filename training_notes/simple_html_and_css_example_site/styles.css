@@ -1,0 +1,66 @@
+h1, p {
+    border:1px solid red;
+    background-color:lightblue;
+    padding:10px;
+    margin:10px;
+}
+
+h1 {
+    height:1.2em;
+    width:500px;
+}
+
+p {
+    font-size:0.5em;
+    width:100px;
+    float:left;
+}
+
+ul {
+    clear:left;
+}
+
+p#redtext {
+    color:red;
+}
+
+#bluetext {
+    color:blue;
+}
+
+ol {
+    border:1px solid green;
+    width:200px;
+    position:relative;
+}
+
+ol li {
+    border:1px solid red;
+    padding:5px;
+}
+
+img {
+    height:100px;
+}
+
+.thumbnail {
+    height:20px;
+}
+
+div {
+    border:1px solid green;
+    background-color:grey;
+    position:fixed;
+    bottom:0px;
+    left:0px;
+    width:100%;
+}
+
+input {
+    float:left;
+    clear:left;
+}
+
+label {
+    float:left;
+}

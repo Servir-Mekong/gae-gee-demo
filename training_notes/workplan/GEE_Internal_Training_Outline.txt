@@ -1,0 +1,99 @@
+#+TITLE: Google Earth Engine/Google App Engine Internal Training Workshop
+#+AUTHOR: Gary W. Johnson, Ph.D. (Spatial Informatics Group)
+#+DATE: Bangkok, Thailand - January 2017
+
+* Workshop Objectives
+
+By the end of the fourth day, participants should clearly understand
+the technologies and workflows available to transform a Google Earth
+Engine script written in Javascript into a standalone web application
+that provides the same functionality through a custom web interface.
+We will review and practice frontend web development in HTML, CSS,
+Javascript, and Clojurescript and will build out our backend web stack
+with Python and the Google Earth Engine Python API.
+
+We will first examine each of these individual technologies at a high
+level and perform exercises with them to construct a new simple web
+application. Next, we will work together to integrate the
+functionality from a Javascript GEE script into our new website.
+Finally, we will review the codebase of an existing GEE-based web
+application to understand how its various parts fit together.
+
+* Day 1
+** Pre-Workshop Tasks
+*** TODO Configure screen size
+    - ~/geek/sys/scripts/clone_xdisplay
+    - ~/geek/sys/scripts/toggle_xdisplay
+*** TODO Configure font size
+    - M-: (set-frame-font "Liberation Mono-15" t t)
+    - M-x menu-set-font
+*** TODO Start up the slideshow
+    1. boot development
+    2. chromium-snapshot-bin http://localhost:3000
+** Welcome and Introductions
+   1. Introduce myself
+   2. Round of participant introductions
+** Agenda Review and Goal Setting
+** Web Technology Stack Overview
+** Break
+** Developer Tools Installation
+   - [X] Emacs (install packages and configure init.el)
+     - http://חנוך.se/diary/how_to_enable_GnuTLS_for_Emacs_24_on_Windows/index.en.html
+     - http://stable.melpa.org (clojure-mode, cider, company, paredit)
+     - http://elpa.gnu.org/packages/queue.html
+     - https://raw.githubusercontent.com/Malabarba/spinner.el/master/spinner.el
+   - [X] Bash (explore the prompt)
+   - [X] JDK8 (install from Oracle's site)
+   - [X] Boot (install from http://boot-clj.com)
+   - [X] Git
+   - [X] Python
+   - [X] Chrom[e|ium]
+   - [X] Chrome DevTools (comes with Chrom[e|ium])
+   - [X] React DevTools (Chrome prompts for installation when viewing a ReactJS-based webpage)
+   - [X] Google AppEngine SDK for Python https://cloud.google.com/appengine/docs/python/download
+** Google Cloud Developer Account Setup
+** Lunch
+** HTML5 (Overview and Exercises)
+** CSS3 (Overview and Exercises)
+** Break
+** Javascript (Overview and Exercises)
+** Wrap-up and Review our Progress
+** End of Workshop Day 1
+* Day 2
+** Agenda Review and Goal Setting
+** Clojurescript: Part 1 (Overview and Tooling)
+** Break
+** Clojurescript: Part 2 (Syntax and Semantics)
+   - https://github.com/magomimmo/modern-cljs
+** Lunch
+** Clojurescript: Part 3 (Reagent and core.async)
+   - https://reagent-project.github.io/
+   - https://github.com/weavejester/hiccup/wiki/Syntax
+** Break
+** Clojurescript: Part 4 (Google Maps API)
+** Wrap-up and Review our Progress
+** End of Workshop Day 2
+* Day 3
+** Agenda Review and Goal Setting
+** Using Git and GitHub
+** Break
+** Adding Dynamic Routes with Python
+   - According to https://code.google.com/p/googleappengine/issues/detail?id=13477, the fix is:
+   - $ wget https://curl.haxx.se/ca/cacert.pem -O /opt/google-cloud-sdk/platform/google_appengine/lib/cacerts/urlfetch_cacerts.txt
+** Lunch
+** GEE Javascript to Python Translation
+** Break
+** Displaying GEE Result Maps and Charts
+** Wrap-up and Review our Progress
+** End of Workshop Day 3
+* Day 4
+** Agenda Review and Goal Setting
+** Ecodash Codebase Walkthrough: Part 1
+** Break
+** Ecodash Codebase Walkthrough: Part 2
+** Wrap-up and Review our Progress
+** End of Workshop Day 4
+
+project = sig-gis.com:api-project-761071060509
+
+OpenSSL and pyCrypto are not available by default on Windows 10
